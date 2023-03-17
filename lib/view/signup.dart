@@ -37,6 +37,8 @@ import 'package:signinapp/route/route.dart' as route;
                        autofillHints: [AutofillHints.username],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.email,color: Colors.black),
                        hintText: 'Email',
                        
                        
@@ -62,6 +64,8 @@ import 'package:signinapp/route/route.dart' as route;
                        autofillHints: [AutofillHints.password],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.lock,color: Colors.black),
                        hintText: 'Password'
                        ),
                        
@@ -81,6 +85,8 @@ import 'package:signinapp/route/route.dart' as route;
                        autofillHints: [AutofillHints.password],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.lock,color: Colors.black),
                        hintText: "Confirm Password"
                        ),
                         validator: (validator) {

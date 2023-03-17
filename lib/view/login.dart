@@ -39,6 +39,8 @@
                        autofillHints: [AutofillHints.username],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.email,color: Colors.black),
                        hintText: 'Email',
                        
                        ),
@@ -55,6 +57,8 @@
                        autofillHints: [AutofillHints.password],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.lock,color: Colors.black),
                        hintText: 'Password'
                        ),
                        validator: (val) {

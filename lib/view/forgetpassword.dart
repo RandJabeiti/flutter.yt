@@ -37,6 +37,8 @@ class ForgetpasswordPage extends StatelessWidget {
                        autofillHints: [AutofillHints.username],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.email,color: Colors.black),
                        hintText: 'Email',
                        
                        
@@ -62,6 +64,8 @@ class ForgetpasswordPage extends StatelessWidget {
                        autofillHints: [AutofillHints.password],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.lock,color: Colors.black),
                        hintText: 'New password'
                        ),
                        
@@ -81,6 +85,8 @@ class ForgetpasswordPage extends StatelessWidget {
                        autofillHints: [AutofillHints.password],
                        decoration: InputDecoration(
                        border: OutlineInputBorder(),
+                       fillColor: Colors.white, filled: true,
+                       icon: Icon(Icons.lock,color: Colors.black),
                        hintText: 'Confirm new password'
                        ),
                         validator: (validator) {
