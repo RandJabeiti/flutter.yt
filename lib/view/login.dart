@@ -81,7 +81,11 @@
                    ElevatedButton( 
                     onPressed: () {
                 if (_formKey.currentState!.validate()) {
+                  Navigator.of(context).pushNamedAndRemoveUntil(route.loginPage2, (route) => false);
                 }
+                else {
+           
+           }
               },
                      child: const Text('login')),
                               
@@ -92,4 +96,4 @@
             )),
        ) );
   }
-  } 
+  }

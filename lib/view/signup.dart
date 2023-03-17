@@ -49,7 +49,7 @@ import 'package:signinapp/route/route.dart' as route;
                         return 'Please enter your email';
                       }
                       if(!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value)){
-                        return 'Please a valid Email';
+                        return 'Please enter a valid Email';
                       }
                       
                       return null;
@@ -101,8 +101,8 @@ import 'package:signinapp/route/route.dart' as route;
          onPressed: () {
   
                  if (_formKey.currentState!.validate()) {
-                  Navigator.pushNamed(context, 
-                  route.registerPage);
+                  Navigator.of(context).pushNamedAndRemoveUntil(route.registerPage, (route) => false);
+                 
                   }
           else {
            

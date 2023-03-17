@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:signinapp/route/route.dart' as route;
 
+
+
 class RegisterPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -27,6 +29,11 @@ class RegisterPage extends StatefulWidget{
     });
     super.initState();
   }
+  @override
+dispose() {
+  animationcontroller.dispose(); // you need this
+  super.dispose();
+}
     
     @override
     Widget build(BuildContext context) {
@@ -36,12 +43,26 @@ class RegisterPage extends StatefulWidget{
           title: Text('Register Page'),
         ),
       body: Column(
+
         children: [
           Text('Successfully Registered!',
                   style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 30),),
+                  
+                  ElevatedButton(
+          child: Text('Return to Home Page'),
+         onPressed: () {
+                  {
+                  Navigator.of(context).pushNamedAndRemoveUntil(route.welcomepagePage, (route) => false);
+                  }
+          
+           
+                        
+              },
+          ),
+
           Expanded(
             child:Container(
            padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
@@ -57,6 +78,7 @@ class RegisterPage extends StatefulWidget{
            ),
            
          ),
+         
        )
       ]
      ), 
